@@ -1,0 +1,387 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    letter-spacing: .1rem;
+}
+:root{
+    --bg-color : #1abc9c;
+    --bg-hover: #16a085;
+    --color1: #fff;
+    --black-color: #5A5A5A;
+}
+#header{
+    background: var(--bg-color);
+    border-bottom: 3px solid var(--bg-hover);
+    font-weight: bold;
+}
+#header nav{
+    padding: 0;
+}
+#header a.navbar-brand{
+    color: var(--color1);
+}
+#header nav ul.navbar-nav li a{
+    color: var(--color1);
+    padding: 15px;
+    transition: all .3s ease;
+    
+}
+#header nav ul.navbar-nav{
+    padding: 0;
+    margin: 0;
+}
+#header nav ul.navbar-nav li a:hover{
+    background: var(--bg-hover);
+}
+/* start banner */
+#banner{
+    background: url("../images/banner3.jpg") no-repeat 0 0;
+    background-size: cover;
+    padding: 200px;
+    
+}
+#banner .banner-details{
+    text-align: center;
+    color: var(--bg-hover);
+    font-weight: bold;
+}
+
+#banner .banner-details h1 span{
+    color: var(--color1);
+    background: var(--bg-color);
+    padding: 0 10px;
+}
+#banner .banner-details p{
+    font-size: 22px;
+    font-weight: 1000;
+    color: var(--bg-hover);
+
+}
+/* end banner */
+
+/* start service */
+#section{
+    margin-top: 90px;
+    transition: all 3s ease;
+
+}
+#section:hover .section-title span:after{
+    visibility: visible;
+}
+#section .section-title{
+    text-align: center;
+}
+#section .section-title h2{
+    color: var(--black-color);
+}
+#section .section-title h2:after{
+    content: '';
+    width: 110px;
+    height: 3px;
+    background: var(--bg-color);
+    display: block;
+    margin: 4px auto;
+}
+#section .service-section{
+    /* position: relative; */
+    padding: 20px 20px 10px 20px;
+    border: 2px solid var(--bg-color);
+    margin-top: 100px;
+    transition: all .5s ease;
+}
+#section .service-section:hover .service-details h4{
+    color: var(--color1);
+}
+#section .service-section:hover{
+    background: var(--bg-color);
+}
+#section .service-section:hover .service-icon{
+    background-color: var(--color1);
+    border: 2px solid var(--bg-color);
+}
+#section .service-section:hover .service-icon span i{
+    color: var(--bg-color);
+}
+#section .service-icon{
+    border: 2px solid var(--color1);
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    margin-top: -81px;
+    background: var(--bg-color);
+}
+#section .service-icon span i{
+    transform: rotate(315deg);
+    font-size:50px;
+    color: var(--color1);
+}
+#section .service-details{
+    padding-top: 30px;
+}
+#section .service-details h4{
+    color: var(--bg-color);
+}
+#section .service-details h4:after{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background: var(--color1);
+    display: block;
+    transition: width .5s ease;
+}
+#section .service-details:hover h4:after{
+    width: 150px;
+}
+/* end service */
+
+/* start about */
+#section .about-section{
+    text-align: center;
+}
+#section .about-section .about-image img{
+    width: 50%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+#section .about-section .about-details h4{
+    color: var(--bg-color);
+    margin-top: 10px;
+    font-weight: bold;
+}
+#section .about-section .about-details p{
+    color: var(--black-color);
+}
+#section .about-bar{
+    background: #eee;
+    position: relative;
+    display: flex;
+    height: 30px;
+    margin-top: 15px;
+}
+#section .about-bar .about-bar-percentage{
+    background: var(--bg-color);
+}
+#section .about-bar .about-bar-title{
+    background: var(--bg-hover);
+    /* background: var(--bg-color); */
+
+    width: 120px;
+    color: var(--color1);
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+#section .about-bar span{
+    position: absolute;
+    right: 2px;
+    line-height: 30px;
+    /* padding: 5px; */
+
+    /* top: 3px; */
+}
+/* end about */
+
+/* start my projects */
+#section .filter-btn-div{
+    margin: 30px 0;
+}
+#section .filter-btn-div button{
+    font-size: 20px;
+    padding: 2px 10px;
+    /* margin: 0; */
+    /* border: none; */
+}
+#section .filter-btn-div button.active{
+    background: var(--bg-color);
+    color: var(--color1);
+}
+#section .project-section{
+    margin: 20px 0;
+}
+#section .project-section .card .card-body button{
+    color: var(--color1);
+    border: 2px solid var(--color1);
+    border-radius: 0px;
+    transition: all .4s ease;
+}
+#section .project-section .card .card-body button:hover{
+    background: var(--color1);
+    opacity: .9;
+    color: var(--bg-color);
+}
+#section .project-section .card:hover .card-body{
+    opacity: 1;
+}
+#section .project-section .card{
+    position: relative;
+    overflow: hidden;
+}
+#section .project-section .card img{
+    width: 100%;
+    height: 200px;
+}
+#section .project-section .card:before,
+#section .project-section .card:after{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: var(--bg-color);
+    position: absolute; 
+    /* left: 0; */
+    top: 0;
+    opacity: 0;
+    transition: all .5s ease;
+}
+#section .project-section .card:before{
+    left: -120px;
+}
+#section .project-section .card:after{
+    right: -120px;
+}
+#section .project-section .card:hover:before,
+#section .project-section .card:hover:after{
+    opacity: .6;
+}
+
+#section .project-section .card:hover:before{
+    left: 0;
+}
+#section .project-section .card:hover:after{
+    right: 0;
+}
+#section .project-section .card .card-body{
+    position: absolute;
+    color: var(--color1);
+    transition: all .5s ease;
+    opacity: 0;
+    left: 25%;
+    z-index: 1;
+    top: 25%;
+}
+.modal .modal-body .carousel-control-prev,
+.modal .modal-body .carousel-control-next{
+    /* color: var(--bg-color) !important; */
+    background: var(--bg-color) !important;
+    
+}
+.modal .modal-body .project_image_div .carousel-inner img{
+    width: 100%;
+    height: 50vh;
+}
+.modal .modal-body .project-details{
+    padding: 0 20px;
+}
+.modal .modal-body .project-details h4{
+    text-align: center;
+    text-decoration: underline;
+    color: var(--bg-color);
+    margin-bottom: 30px;
+}
+.modal .modal-body .project-details ul li{
+    color: var(--black-color);
+}
+.modal .modal-body .project-details ul li:first-child{
+    list-style: none;
+}
+.modal .modal-body .project-details ul li::marker{
+    color: var(--bg-color);
+}
+/* end my projects */
+
+/* start contant us */
+.contact-section-start{
+    background: var(--bg-color);
+    padding: 50px 0;
+    /* background: #000; */
+}
+.contact-section-start .contact-section-title h2{
+    color: var(--color1) !important;
+}
+#section .section-title.contact-section-title h2:after{
+    content: '';
+    width: 110px;
+    height: 3px;
+    background: var(--color1);
+    display: block;
+    margin: 4px auto;
+}
+#section form.contact-form{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#section form.contact-form .fname_div,
+#section form.contact-form .lname_div{
+    width: 49.5%;
+    display: inline-block;
+}
+#section form.contact-form label{
+    color: var(--color1);
+}
+#section form.contact-form input,
+#section form.contact-form textarea{
+    border-radius: 0px;
+    border: none;
+    transition: all .3s ease;
+    letter-spacing: normal;
+}
+#section form.contact-form input:focus,
+#section form.contact-form textarea:focus{
+    letter-spacing: .1rem;
+}
+
+#section form.contact-form button.contact-submit-btn{
+    /* background: var(--color1); */
+    color: var(--color1);
+    border-radius: 0px;
+    /* font-size: 18px; */
+    font-weight: bold;
+    transition: all .3s ease;
+    border: 1px solid var(--color1);
+}
+#section form.contact-form button.contact-submit-btn:hover{
+    background: var(--color1);
+    color: var(--bg-color);
+}
+
+/* end contant us */
+
+/* start footer */
+footer{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    bottom: 0;
+}
+footer .footer-section-icon-top{
+    text-align: center;
+    margin-top: -10px;
+}
+footer .footer-section-icon-top a{
+    color: var(--color1);
+    background: #000;
+    padding: 10px;
+    font-size: 30px;
+}
+
+footer .footer-section{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+/* end footer */
+
+/* media queries */
+@media screen and (max-width: 975px) {
+    #section form.contact-form .fname_div,
+    #section form.contact-form .lname_div{
+        width: 100%;
+        display: block;
+    }
+}
