@@ -4,142 +4,122 @@ html{
 *{
     padding: 0;
     margin: 0;
-    letter-spacing: .1rem;
 }
 :root{
-    --bg-color : #1abc9c;
-    --bg-hover: #16a085;
-    --color1: #fff;
-    --black-color: #5A5A5A;
+    --bg-color: linear-gradient(90deg, rgba(150,91,190,1) 30%, rgba(69,168,252,1) 100%);
+    --bg-color2: linear-gradient(90deg, rgba(69,168,252,1) 15%, rgba(150,91,190,1) 100%);
+    --white: rgb(255, 255, 255);
+    --blue: rgba(69,168,252,1); 
+    --purple: rgba(150,91,190,1); 
 }
-#header{
-    background: var(--bg-color);
-    border-bottom: 3px solid var(--bg-hover);
-    font-weight: bold;
+body{
+    background-color: #F9F9FF;
 }
-#header nav{
-    padding: 0;
-}
-#header a.navbar-brand{
-    color: var(--color1);
-}
-#header nav ul.navbar-nav li a{
-    color: var(--color1);
-    padding: 15px;
-    transition: all .3s ease;
-    
-}
-#header nav ul.navbar-nav{
-    padding: 0;
-    margin: 0;
-}
-#header nav ul.navbar-nav li a:hover{
-    background: var(--bg-hover);
-}
-/* start banner */
-#banner{
-    background: url("../images/banner3.jpg") no-repeat 0 0;
-    background-size: cover;
-    padding: 200px;
-    
-}
-#banner .banner-details{
-    text-align: center;
-    color: var(--bg-hover);
-    font-weight: bold;
-}
-
-#banner .banner-details h1 span{
-    color: var(--color1);
-    background: var(--bg-color);
-    padding: 0 10px;
-}
-#banner .banner-details p{
-    font-size: 22px;
-    font-weight: 1000;
-    color: var(--bg-hover);
-
-}
-/* end banner */
-
-/* start service */
 #section{
     margin-top: 90px;
     transition: all 3s ease;
-
-}
-#section:hover .section-title span:after{
-    visibility: visible;
 }
 #section .section-title{
     text-align: center;
+    position: relative;
 }
 #section .section-title h2{
     color: var(--black-color);
+    border: 2px solid var(--purple);
+    width: 230px;
+    margin: 20px auto;
+    color: var(--purple);
+    background: #fff;
 }
-#section .section-title h2:after{
-    content: '';
-    width: 110px;
-    height: 3px;
+
+/* start header */
+header{
     background: var(--bg-color);
-    display: block;
-    margin: 4px auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
 }
-#section .service-section{
-    /* position: relative; */
-    padding: 20px 20px 10px 20px;
-    border: 2px solid var(--bg-color);
-    margin-top: 100px;
-    transition: all .5s ease;
+header nav.nav a{
+    padding: 15px 0;
+    color: var(--white);
 }
-#section .service-section:hover .service-details h4{
-    color: var(--color1);
+header nav.nav a:hover{
+    color: var(--white);
+
 }
-#section .service-section:hover{
-    background: var(--bg-color);
+
+/* end header */
+
+/* start main */
+#banner{
+    margin-bottom: -60px;
 }
-#section .service-section:hover .service-icon{
-    background-color: var(--color1);
-    border: 2px solid var(--bg-color);
+main .portfolio-details{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+transition: all 4s linear !important;
 }
-#section .service-section:hover .service-icon span i{
-    color: var(--bg-color);
+main .portfolio-details h1{
+    text-transform: uppercase;
 }
-#section .service-icon{
-    border: 2px solid var(--color1);
-    margin: 0 auto;
-    width: 120px;
-    height: 120px;
+main .portfolio-details p{
+    align-self: flex-start;
+    color: rgb(150,91,190);
+    font-weight: 500;
+}
+main .portfolio-details button{
+    width: 100px;
+    color: var(--white);
+    box-shadow: .2rem -.2rem 0rem 0rem rgba(150,91,190,0.6);
+
+}
+main .portfolio-details .social-link a{
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--white);
+    box-shadow: .2rem -.2rem 0rem 0rem rgba(150,91,190,0.6);
+    background: var(--bg-color2);
+    font-size: 18px;
+}
+main .portfolio-details .social-link {
+
+}
+main .portfolio-details button:hover{
+    color: var(--white);
+    box-shadow: inset 2px 2px 10px 10px rgba(150,91,190,0.6);
+
+}
+
+
+
+.portfolio-image{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(45deg);
-    margin-top: -81px;
+    flex-direction: column;
+    /* background: #fff; */
+
+}
+main .portfolio-image img{
+    width: 50%;
+    z-index: 10000;
+    transform: translate(20deg);
+    box-shadow: 1rem -1rem 0rem 0rem rgba(150,91,190,.6);
+    
+}
+
+main button{
     background: var(--bg-color);
 }
-#section .service-icon span i{
-    transform: rotate(315deg);
-    font-size:50px;
-    color: var(--color1);
-}
-#section .service-details{
-    padding-top: 30px;
-}
-#section .service-details h4{
-    color: var(--bg-color);
-}
-#section .service-details h4:after{
-    content: '';
-    height: 3px;
-    width: 0px;
-    background: var(--color1);
-    display: block;
-    transition: width .5s ease;
-}
-#section .service-details:hover h4:after{
-    width: 150px;
-}
-/* end service */
 
 /* start about */
 #section .about-section{
@@ -149,6 +129,7 @@ html{
     width: 50%;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
+
 #section .about-section .about-details h4{
     color: var(--bg-color);
     margin-top: 10px;
@@ -168,11 +149,9 @@ html{
     background: var(--bg-color);
 }
 #section .about-bar .about-bar-title{
-    background: var(--bg-hover);
-    /* background: var(--bg-color); */
-
+    background: var(--blue);
     width: 120px;
-    color: var(--color1);
+    color: var(--white);
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
@@ -181,11 +160,72 @@ html{
     position: absolute;
     right: 2px;
     line-height: 30px;
-    /* padding: 5px; */
-
-    /* top: 3px; */
 }
 /* end about */
+/* start service */
+
+#section .service-section{
+    /* position: relative; */
+    padding: 20px 20px 10px 20px;
+    border: 2px solid var(--purple);
+    margin-top: 100px;
+    transition: all .4s ease;
+}
+#section .service-section:hover .service-details h4{
+    color: var(--white);
+}
+#section .service-section .service-details h4{
+    font-size: 18px;
+    color: var(--purple);
+
+}
+#section .service-section:hover{
+    background: var(--bg-color);
+}
+#section .service-section:hover .service-icon{
+    background: var(--white);
+    border: 2px solid var(--purple);
+    color: var(--white);
+}
+#section .service-section:hover .service-icon span i{
+    color: var(--purple);
+}
+#section .service-icon{
+    border: 2px solid var(--purple);
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    margin-top: -71px;
+    background: var(--bg-color);
+}
+#section .service-icon span i{
+    transform: rotate(315deg);
+    font-size:50px;
+    color: var(--white);
+}
+#section .service-details{
+    padding-top: 30px;
+}
+#section .service-details h4{
+    color: var(--bg-color);
+}
+#section .service-details h4:after{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background: var(--white);
+    display: block;
+    transition: width .5s ease;
+}
+#section .service-details:hover h4:after{
+    width: 150px;
+}
+
+/* end service */
 
 /* start my projects */
 #section .filter-btn-div{
@@ -205,15 +245,15 @@ html{
     margin: 20px 0;
 }
 #section .project-section .card .card-body button{
-    color: var(--color1);
-    border: 2px solid var(--color1);
+    color: var(--white);
+    border: 2px solid var(--white);
     border-radius: 0px;
     transition: all .4s ease;
 }
 #section .project-section .card .card-body button:hover{
-    background: var(--color1);
+    background: var(--white);
     opacity: .9;
-    color: var(--bg-color);
+    color: var(--purple);
 }
 #section .project-section .card:hover .card-body{
     opacity: 1;
@@ -225,13 +265,14 @@ html{
 #section .project-section .card img{
     width: 100%;
     height: 200px;
+    object-fit: cover;
 }
 #section .project-section .card:before,
 #section .project-section .card:after{
     content: '';
     width: 50%;
     height: 100%;
-    background: var(--bg-color);
+    background: var(--purple);
     position: absolute; 
     /* left: 0; */
     top: 0;
@@ -257,7 +298,7 @@ html{
 }
 #section .project-section .card .card-body{
     position: absolute;
-    color: var(--color1);
+    color: var(--white);
     transition: all .5s ease;
     opacity: 0;
     left: 25%;
@@ -296,18 +337,18 @@ html{
 
 /* start contant us */
 .contact-section-start{
-    background: var(--bg-color);
+    background: var(--bg-color2);
     padding: 50px 0;
     /* background: #000; */
 }
 .contact-section-start .contact-section-title h2{
-    color: var(--color1) !important;
+    color: var(--purple) !important;
 }
 #section .section-title.contact-section-title h2:after{
     content: '';
     width: 110px;
     height: 3px;
-    background: var(--color1);
+    background: var(--purple);
     display: block;
     margin: 4px auto;
 }
@@ -322,7 +363,8 @@ html{
     display: inline-block;
 }
 #section form.contact-form label{
-    color: var(--color1);
+    color: var(--white);
+    font-weight: bold;
 }
 #section form.contact-form input,
 #section form.contact-form textarea{
@@ -337,17 +379,16 @@ html{
 }
 
 #section form.contact-form button.contact-submit-btn{
-    /* background: var(--color1); */
-    color: var(--color1);
+    color: var(--purple);
     border-radius: 0px;
-    /* font-size: 18px; */
     font-weight: bold;
     transition: all .3s ease;
-    border: 1px solid var(--color1);
+    border: 1px solid var(--white);
+    background: #fff;
+    margin-top: 10px;
 }
 #section form.contact-form button.contact-submit-btn:hover{
-    background: var(--color1);
-    color: var(--bg-color);
+    border: 1px solid var(--purple);
 }
 
 /* end contant us */
@@ -376,6 +417,8 @@ footer .footer-section{
     text-align: center;
 }
 /* end footer */
+/* end main */
+
 
 /* media queries */
 @media screen and (max-width: 975px) {
